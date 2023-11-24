@@ -1,0 +1,107 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+summary {
+    cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    --color-background: #fff;
+    --color-text: #111;
+    --color-link-contrast: #000;
+
+    --margin: 0 7vw;
+}
+
+/* General */
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    border-bottom: solid 1px #cccccc;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start;
+    margin: var(--margin);
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul button {
+    padding: 0 0.25rem;
+    text-align: center;
+    cursor: default;
+    background: none;
+    border: none;
+}
+
+header nav ul button:hover p {
+    color: #d5001c;
+    border-bottom: solid 3px #d5001c;
+}
+
+header nav ul p {
+    margin: 0;
+    margin-top: -10px;
+    color: #000;
+    padding-bottom: 35px;
+    position: relative;
+}
+
+/* main logo */
+header > nav > a > img {
+    width: 8.3125rem;
+}
+
+/* Ordering items in menu */
+header nav ul:nth-child(2) {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: flex-start;
+    margin-top: 10px;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+/* Second menu */
+ul.links {
+    order: 0;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 55px;
+    padding-top: 0;
+    padding-left: 20px;
+}
+
+ul.links li {
+    padding: 0px 20px;
+}
